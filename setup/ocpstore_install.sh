@@ -28,9 +28,7 @@ sudo useradd -m -p neur0data -g neurodata -s /bin/bash neurodata
 cd /home/neurodata
 sudo -u neurodata git clone https://github.com/neurodata/ndstore
 cd /home/neurodata/ndstore
-sudo -u neurodata git submodule init
-sudo -u neurodata git submodule update
-
+sudo git checkout ae-install
 
 # pip install packages
 cd /home/neurodata/ndstore/setup/

@@ -15,10 +15,10 @@ sudo apt-get -y install mysql-client-core-5.6 libhdf5-serial-dev mysql-client-5.
 sudo apt-get -y install nginx git bash-completion python-virtualenv libhdf5-dev libxslt1-dev libmemcached-dev g++ libjpeg-dev virtualenvwrapper python-dev mysql-server-5.6 libmysqlclient-dev xfsprogs supervisor rabbitmq-server uwsgi uwsgi-plugin-python liblapack-dev wget memcached libffi-dev libssl-dev  
 
 # create the log directory
-sudo mkdir /var/log/neurodata
-sudo touch /var/log/neurodata/ndstore.log
-sudo chown -R www-data:www-data /var/log/neurodata
-sudo chmod -R 777 /var/log/neurodata/
+sudo mkdir /var/log/ocp
+sudo touch /var/log/ocp/ocp.log
+sudo chown -R www-data:www-data /var/log/ocp
+sudo chmod -R 777 /var/log/ocp/
 
 # add group and user neurodata
 sudo addgroup neurodata

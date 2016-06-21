@@ -34,6 +34,9 @@ sudo git checkout ae-install
 cd /home/neurodata/ndstore/setup/
 #sudo pip install -U -r requirements.txt
 sudo pip install cython numpy
+sudo easy_install -i http://www.turbogears.org/1.5/downloads/current/index TurboGears
+sudo easy_install -i http://www.turbogears.org/2.0/downloads/current/PEAK-Rules-0.5a1.dev-r2686.tar.gz PEAK-Rules
+
 sudo pip install -U -r requirements.txt
 #sudo pip install django h5py pytest
 #sudo pip install pillow posix_ipc boto3 nibabel networkx requests lxml pylibmc blosc django-registration django-celery mysql-python libtiff jsonschema json-spec redis
@@ -50,7 +53,7 @@ mysql -u root -pneur0data -i -e "create user 'neurodata'@'localhost' identified 
 # configure django setttings
 cd /home/neurodata/ndstore/django/OCP/
 sudo -u neurodata cp settings.py.example settings.py
-sudo -u neurodata ln -s /home/neurodata/ndstore/setup/docker_config/django/docker_settings_secret.py settings_secret.py
+sudo -u neurodata cp settings_secret.py.example settings_secret.py
 
 # migrate the database and create the superuser
 sudo chmod -R 777 /var/log/neurodata/
